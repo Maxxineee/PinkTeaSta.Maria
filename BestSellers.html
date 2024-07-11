@@ -1,0 +1,590 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pink Tea Sta.Maria</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+      <style>
+    /* Navbar and overall background gradient */
+    body {
+        background: linear-gradient(to bottom, #ffcccc, #ffc0cb, #ffffff); /* Pink gradient to white */
+        font-family: Arial, sans-serif; /* Set a fallback font */
+    }
+
+    .navbar {
+        background: linear-gradient(to right, #f17bc0, #ffcccc); /* Navbar gradient from pink to light pink */
+    }
+
+    .navbar-brand {
+    font-size: 30px; /* Adjust font size as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    margin-left: 10px; /* Adjust alignment with the logo */
+    color: #ffffff; /* Pink font color */
+}
+
+.logo {
+    width: 100px; /* Adjust logo width */
+    margin-right: 10px; /* Adjust spacing between logo and title */
+}
+
+.nav-link {
+    color: #ffffff; /* Font color */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Font family */
+    font-size: 15px; /* Font size */
+}
+
+    /* Additional styles for sections */
+    section {
+        background: linear-gradient(to bottom, #fff5f7, #ffd9e6); /* Light pink gradient background */
+        padding: 60px 0; /* Adjust padding as needed */
+    }
+
+    /* Carousel image size */
+    .carousel-inner img {
+        max-height: 700px; /* Increase maximum height for emphasis */
+        width: 100%; /* Adjust width for responsive display */
+        object-fit: cover; /* Maintain aspect ratio and cover entire slide */
+        margin: 0 auto; /* Center align images */
+    }
+
+    /* Font style for About Us title */
+#about-us h1 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Example of serif font */
+    font-size: 50px; /* Adjust the font size */
+    font-style: italic; /* Example of italic style */
+    font: center;
+    color: #c9257f; /* Adjust font color */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    
+}
+
+/* Font style for About Us text message */
+#about-us p {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Example of sans-serif font */
+    font-size: 16px; /* Adjust the font size */
+    line-height: 1.6; /* Adjust line height for readability */
+    color: #000000; /* Adjust font color */
+    margin-top: 50px
+}
+
+/* Font style for BestSellers title */
+#BestSellers h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Example of serif font */
+    font-size: 50px; /* Adjust the font size */
+    font-style: italic; /* Example of italic style */
+    color: #c9257f; /* Adjust font color */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    margin-top: 50 px;
+}
+
+/* Custom Font for Card Titles */
+#bestsellers .card-title {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Example of sans-serif font */
+    font-size: 20px; /* Adjust the font size */
+    font-weight: bold;
+    color: #313131; /* Adjust font color */
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+/* Custom Font for Card Text */
+#bestsellers .card-text {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Example of monospace font */
+    font-size: 16px; /* Adjust the font size */
+    color: #333; /* Adjust font color */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+/* Font style for Products title */
+#Products h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Example of serif font */
+    font-size: 50px; /* Adjust the font size */
+    font-style: italic; /* Example of italic style */
+    color: #c9257f; /* Adjust font color */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+    /* Custom Font and Color for Card Headers */
+    #products .card-header h5 {
+        font-family: Georgia, 'Times New Roman', Times, serif; /* Example of sans-serif font */
+        font-size: 20px; /* Adjust the font size */
+        color: #ff3c8d; /* Adjust font color */
+        font-weight: bold; /* Make the subtitle bold */
+        margin-bottom: 20px; /* Adjust spacing as needed */
+    }
+
+    /* Custom Font and Color for Product Text */
+    #products .card-body {
+        font-family: Georgia, 'Times New Roman', Times, serif, monospace; /* Example of monospace font */
+        font-size: 16px; /* Adjust the font size */
+        color: #333; /* Adjust font color */
+        margin-bottom: 10px; /* Adjust spacing as needed */
+    }
+
+    /* Custom Font and Color for Table Headers */
+    #products table th {
+        font-family: Georgia, 'Times New Roman', Times, serif; /* Example of sans-serif font */
+        font-size: 18px; /* Adjust the font size */
+        color: #ff64bf; /* Adjust font color */
+    }
+
+    /* Custom Font and Color for Table Body */
+    #products table td {
+        font-family: Georgia, 'Times New Roman', Times, serif; /* Example of sans-serif font */
+        font-size: 16px; /* Adjust the font size */
+        color: #2c2121; /* Adjust font color */
+    }
+
+    /* Change the font color of all series titles */
+    .card-header h5 .btn-link {
+        color: #000000; /* Adjust the font color */
+    }
+
+    /* Change the font color of flavors under each series */
+    .card-body table tbody tr td {
+        color: #333; /* Adjust the font color */
+    }
+
+
+    /* Gradient background for card headers */
+    .card-header {
+        background: linear-gradient(to right, #ff9ac9, #fecfef); /* Adjust the gradient colors */
+        color: #fff; /* Adjust the text color if necessary */
+    }
+
+    /* Gradient background for card bodies */
+    .card-body {
+        background: linear-gradient(to right, #f896ae, #fc9fc6); /* Adjust the gradient colors */
+        color: #333; /* Adjust the text color if necessary */
+    }
+
+/* Font style for OtherServices title */
+#OtherServices h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Example of serif font */
+    font-size: 50px; /* Adjust the font size */
+    font-style: italic; /* Example of italic style */
+    color: #c9257f; /* Adjust font color */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+#other-services .service-item h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: bold;
+            color: #1f1419;
+        }
+        #other-services .service-item p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #2c2b2b;
+        }
+
+    .rating-section {
+        background-color: #ffe6e6; /* Light pink background */
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .rating-section h3 {
+        color: #ff64bf; /* Dark pink text color */
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .rating {
+        margin-bottom: 15px;
+    }
+
+    .stars {
+        color: #ccc; /* Default color for stars */
+        font-size: 24px;
+    }
+
+    .stars .star {
+        cursor: pointer;
+    }
+
+    .stars .star.filled {
+        color: #f56bb7; /* Pink color for filled stars */
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: #fcb2ce; /* Pink button background */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #e7a3b1; /* Darker pink on hover */
+    }
+
+    .card-img-top {
+        height: 300px; /* Adjust the height as per your design */
+        object-fit: cover; /* Maintain aspect ratio and cover the entire card */
+    }
+
+    .product-item {
+        margin-bottom: 10px;
+        line-height: 1.6; /* Adjust line height as needed */
+    }
+
+    .icon {
+        width: 30px; /* Adjust size as needed */
+        height: auto;
+        margin-right: 10px; /* Adjust spacing as needed */
+    }
+
+    .custom-list {
+        list-style-type: none; /* Remove default list style */
+        padding-left: 0; /* Remove default left padding */
+    }
+
+    /* Custom CSS for changing color to pink */
+    .btn-link {
+        color: #faadd3; /* Pink color */
+    }
+
+    .btn-link:hover {
+        color: #ffcfe7; /* Darker pink on hover */
+    }
+
+   /* Gradient background for .nav-link */
+   .nav-link , .card {
+            background: linear-gradient(to right, #fac8e7, #fecfe1); /* Adjust gradient colors */
+            color: #ffffff; /* Text color */
+        }
+     /* Plain background for .btn */
+     .btn {
+            background-color: #ffecf4; /* White background */
+            color: #333; /* Text color */
+        }
+
+    .service-item img {
+        max-width: 100%;
+        height: 70%;
+
+}
+    .about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Maintains aspect ratio */
+}
+
+.contact-icons {
+    max-width: 100%;
+    height: 20%;
+}
+
+.contact-icons a {
+    margin-right: 10px; /* Adjust spacing between icons */
+    height: auto
+
+}
+
+.icon {
+    width: 80px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+</style>
+
+        <!-- javascript --> 
+        <script src="js/owl.carousel.js"></script>
+        <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+            <div>
+                <a href="#">
+                    <img  class="logo" src="pinktea/logo1-Photoroom.png"> 
+                    <h1 class="navbar-brand">Pink Tea Sta.Maria</h1>
+                </a>
+            </div>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+                
+                 <li class="nav-item">
+                     <a class="nav-link" href="111.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                            Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="BestSellers.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                        Best Sellers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Products.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="OtherServices.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                        Other Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="LoginPage.html">
+                        <td><img src="pinktea/navicon.png" alt="Milk Tea Icon" class="icon" style="width: 40px; height: 45px; margin-right: 0;" alt="Milktea Icon"></td>
+                        Login
+                    </a>
+                </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- Best Sellers Section with Pictures -->
+        
+        <section id="bestsellers" class="mt-5 pt-5">
+            <div class="container">
+                <h2>Best Sellers</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs1.jpg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Chocolate Milk Tea</h5>
+                                <p class="card-text">Rich dark chocolate blended with creamy milk tea for a decadent treat.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs2.jpeg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Matcha Milk Tea</h5>
+                                <p class="card-text">Authentic matcha green tea combined with creamy milk for a vibrant flavor.
+
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs3.jpeg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Classic Milk Tea</h5>
+                                <p class="card-text">Timeless blend of tea and milk for a smooth, satisfying taste.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs4.jpeg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Oreo Milk Tea</h5>
+                                <p class="card-text">Creamy milk tea with crunchy Oreo cookies for a delightful twist.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs5.jpeg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Wintermelon Milk Tea</h5>
+                                <p class="card-text">Soothing wintermelon flavor in a refreshing, creamy milk tea blend.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pinktea/bs6.jpg" class="card-img-top" alt="Best Seller 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Mocha Milk Tea</h5>
+                                <p class="card-text">Rich dark mocha infused into creamy milk tea for indulgent flavor.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+
+
+
+
+
+
+               <!-- Footer -->
+        
+               <footer class="mt-5 pt-5 pb-3 bg-light text-center">
+        
+                <p>&copy; 2024 Milk Tea Business. For educational purposes only.</p>
+                <p>Click to connect :</p>
+                <div class="contact-icons">
+                    <a href="https://instagram.com/pinkteastamaria" target="_blank" title="Instagram: @pinkteastamaria"><img src="pinktea/1.png" alt="Instagram" class="icon"></a>
+                    <a href="mailto:pinkteastamaria@gmail.com" title="Email: pinkteastamaria@gmail.com"><img src="pinktea/2.png" alt="Email" class="icon"></a>
+                    <a href="https://facebook.com/pinkteastamaria" target="_blank" title="Facebook: Pink Tea Sta.Maria"><img src="pinktea/3.png" alt="Facebook" class="icon"></a>
+                    <a href="tel:+639164688587" title="Phone: 09164688587"><img src="pinktea/4.png" alt="Phone" class="icon"></a>
+                </div>
+                
+                
+            </footer>
+    
+            <!-- JavaScript -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+            // Check if user is logged in, otherwise show login modal
+            $(document).ready(function() {
+            if (!isLoggedIn()) {
+            $('#loginModal').modal('show');
+            }
+            });
+    
+            // Function to check if user is logged in (dummy function for demonstration)
+            function isLoggedIn() {
+            // Replace this with your actual logic to check if user is logged in
+            // For example, check a session variable or cookie
+            return false; // Change to true if user is logged in
+            }
+            </script>
+            <!-- CSS -->
+            <style>
+            /* Add this CSS to position the top-down button */
+            .top-down-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensure it's above other content */
+            display: none; /* Initially hidden */
+            }
+            </style>
+            <!-- HTML for Top-Down Button -->
+            <a href="#" class="top-down-button btn btn-primary" role="button" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+            </a>
+            <!-- JavaScript for Top-Down Button -->
+            <script>
+            // Show or hide the top-down button based on scroll position
+            $(document).ready(function() {
+            $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+            $('.top-down-button').fadeIn();
+            } else {
+            $('.top-down-button').fadeOut();
+            }
+            });
+    
+            // Smooth scrolling to top
+            $('.top-down-button').click(function() {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+            });
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.stars .star');
+            const starsContainer = document.querySelector('.stars');
+            const ratingValue = document.querySelector('.rating-value');
+            const comment = document.querySelector('#comment');
+    
+            // Initialize rating value and comment
+            let currentRating = 0;
+            let currentComment = '';
+    
+            // Function to fill stars up to a given index
+            function fillStars(index) {
+            stars.forEach((star, idx) => {
+            if (idx <= index) {
+            star.classList.add('filled');
+            } else {
+            star.classList.remove('filled');
+            }
+            });
+            }
+    
+            // Event listeners for hovering and clicking on stars
+            stars.forEach((star, index) => {
+            star.addEventListener('mouseover', function() {
+            fillStars(index);
+            });
+    
+            star.addEventListener('click', function() {
+            currentRating = index + 1; // index is 0-based, rating starts from 1
+            });
+            });
+    
+            // Submit rating function
+            function submitRating() {
+            // Here you can handle submitting the rating and comment
+            console.log('Rating:', currentRating);
+            console.log('Comment:', comment.value);
+            // You can send this data to your server or perform further actions
+            // Reset stars to default state after submission if needed
+            stars.forEach((star, index) => {
+            star.classList.remove('filled');
+            });
+            // Clear comment textarea
+            comment.value = '';
+            }
+            });
+    
+            </script>
+    
+        </body>
+    
+    </html>
+    
